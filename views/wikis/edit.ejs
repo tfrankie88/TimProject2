@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>edit your page</title>
+  </head>
+  <body>
+  <h1>yoo</h1>
+  <form method="POST" action="/wiki/<%= articles.id %>?_method=PUT">
+    <label for="articles[title]">title</label><br>
+    <input type="text" name="articles[title]" value="<%= articles.title %>"><br>
+    <label for="articles[category]">category</label><br>
+    <input type="text" name="articles[category]" value="<%= articles.category %>"><br>
+    <label for="articles[content]">content</label><br>
+    <input type="text" name="articles[content]" value="<%= articles.content %>"><br>
+    <input type="submit" name="" value="edit wiki-page">
+  </form>
+  </body>
+</html>

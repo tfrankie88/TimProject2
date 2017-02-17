@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Resources</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Everything You Need Nothing You Don't</h1>
+      </header>
+      <section>
+        <a href="/wiki/new">add new</a>
+        <% articles.forEach(wiki => { %>
+          <div class="content_container">
+            <h2><%= wiki.title %></h2>
+            <h3><%= wiki.category %></h3>
+            <p><%= wiki.content %></p>
+            <button type="button" name="edit page">
+              <a href="/wiki/<%= wiki.id %>/edit">edit page</a>
+            </button>
+          </div>
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Stuff</title>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>tell me what you know</h1>
+      </header>
+      <section>
+        <form action="/wiki" method="POST">
+          <label for="wiki[title]">title:</label><br>
+          <input type="text" name="wiki[title]"><br>
+          <label for="wiki[category]">category:</label><br>
+          <!-- <select for='wiki[category]'>
+            <option name="sentence">sentence</option>
+          </select> -->
+          <input type="text" name="wiki[category]"><br>
+          <label for="wiki[content]">go on di it:</label><br>
+          <input type="text" name="wiki[content]"><br>
+          <input type="submit" value="add a new post">
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
