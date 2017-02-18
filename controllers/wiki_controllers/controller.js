@@ -1,5 +1,7 @@
 const Wiki  = require('../../models/wiki');
 const timestamp = require('time-stamp');
+const marked = require('marked');
+
 let controller = {};
 
 controller.index  = (req,res) => {
@@ -21,8 +23,9 @@ controller.new = (req,res) => {
 controller.create = (req,res) => {
   let first_date = timestamp();
   let original_date = first_date.split(':').join('-');
+  let convertedMark = marked(req.body.wiki.content);
   Wiki
-  .save(req.body.wiki, original_date)
+  .save(req.body.wiki, convertedMark, original_date)
   .then(() => res.redirect('/wiki'))
   .catch(err => console.log('ERROR', err));
 }

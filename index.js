@@ -4,6 +4,8 @@ const logger          = require('morgan');
 const bodyParser      = require('body-parser');
 const methodOverride  = require('method-override');
 const path            = require('path');
+const marked          = require('marked');
+
 
 app.set('view engine', 'ejs');
 app.set('views', './views');

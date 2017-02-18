@@ -5,13 +5,13 @@ Wiki.findAll = () => {
   return db.manyOrNone(`SELECT * FROM articles`);
 };
 
-Wiki.save = (wiki, original_date) => {
+Wiki.save = (wiki, convertedMark, original_date) => {
   return db.none(`
     INSERT INTO articles
     (title, category, content, original_date)
     VALUES
     ($1, $2, $3, $4)`,
-    [wiki.title, wiki.category, wiki.content, original_date]
+    [wiki.title, wiki.category, convertedMark, original_date]
   );
 };
 
