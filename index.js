@@ -4,7 +4,6 @@ const logger          = require('morgan');
 const bodyParser      = require('body-parser');
 const methodOverride  = require('method-override');
 const path            = require('path');
-// const timeStamp       = require('time-stamp');
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -18,6 +17,5 @@ app.use(methodOverride('_method'));
 app.use(express.static(
   path.join(__dirname, 'public')
 ));
-// app.use(timestamp());
 
 app.use(require('./resources'));
