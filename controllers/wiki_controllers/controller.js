@@ -34,7 +34,6 @@ controller.show = (req,res) => {
   Wiki
   .findCategory(req.params.category)
   .then((data) => {
-    console.log(data);
     res.render('wikis/show', {
       articles: data
     })

@@ -6,7 +6,8 @@
     <title>Category</title>
   </head>
   <body>
-    <% articles.forEach((wiki) => { %>
+    <div class="category-body"
+    <% articles.forEach(wiki => { %>
       <div class="content_container">
         <h2><%= wiki.title %></h2>
         <h3><%= wiki.category %></h3>
@@ -18,5 +19,6 @@
         </button>
       </div>
     <% }) %>
+    </div>
   </body>
 </html>
