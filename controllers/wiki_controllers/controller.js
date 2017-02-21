@@ -30,6 +30,18 @@ controller.create = (req,res) => {
   .catch(err => console.log('ERROR', err));
 }
 
+controller.show = (req,res) => {
+  Wiki
+  .findCategory(req.params.category)
+  .then((data) => {
+    console.log(data);
+    res.render('wikis/show', {
+      articles: data
+    })
+  })
+  .catch(err => console.log('error', err));
+};
+
 controller.update = (req,res) => {
   console.log(req.body);
   Wiki

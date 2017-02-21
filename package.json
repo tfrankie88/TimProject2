@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "v7.4.0"
+  },
   "dependencies": {
     "body-parser": "^1.16.1",
     "ejs": "^2.5.6",
@@ -16,7 +19,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node: index.js"
   },
   "repository": {
     "type": "git",

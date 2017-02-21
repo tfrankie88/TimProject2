@@ -24,6 +24,15 @@ Wiki.findById = (id) => {
   );
 };
 
+Wiki.findCategory = (category) => {
+  return db.manyOrNone(`
+    SELECT * FROM
+    articles
+    WHERE category = $1`,
+    [category]
+  );
+};
+
 Wiki.update = (wiki, id) => {
   return db.none(`
     UPDATE articles

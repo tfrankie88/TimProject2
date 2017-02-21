@@ -1,1 +1,22 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Category</title>
+  </head>
+  <body>
+    <% articles.forEach((wiki) => { %>
+      <div class="content_container">
+        <h2><%= wiki.title %></h2>
+        <h3><%= wiki.category %></h3>
+        <p><%- wiki.content %></p>
+        <% console.log(typeof `${wiki.original_date}`) %>
+        <p><%= `${wiki.original_date}`.slice(0,10) %></p>
+        <button type="button" name="edit page">
+          <a href="/wiki/<%= wiki.id %>/edit">edit page</a>
+        </button>
+      </div>
+    <% }) %>
+  </body>
+</html>
