@@ -1,5 +1,4 @@
 // bootsnipp java funtioning for category side bar http://bootsnipp.com/snippets/featured/sidebar-responsive
-
 $(window).resize(function() {
 	var path = $(this);
 	var contW = path.width();
@@ -9,6 +8,7 @@ $(window).resize(function() {
 		document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
 	}
 });
+
 $(document).ready(function() {
 	$('.dropdown').on('show.bs.dropdown', function(e){
 	    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
@@ -27,5 +27,12 @@ $(document).ready(function() {
 			document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
 		}
 	});
+  // help stack overflow http://stackoverflow.com/questions/10709016/change-image-onmouseover
+  $('#meth').hover(function() {
+    $(this).attr('src', '/method-man-comment.svg');
+    }, function() {
+    $(this).attr('src', '/method-man.svg');
+  });
+  // end of stack overflow
 });
-// End of bootsnip
+// End of bootsnipp

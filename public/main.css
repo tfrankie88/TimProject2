@@ -1,31 +1,90 @@
+body {
+  background-color: #F2F2E6 !important;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 10px;
+  font-family: 'Just Me Again Down Here' !important;
+  font-size: 50px !important;
+}
+
+button {
+
+}
+
+section {
+  background-color: white;
+  width: 500px;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: 3px;
+  border-bottom: 4px solid rgba(0, 0, 0, .25);
+}
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
 }
 
+.categories-title h3 {
+  padding: 20px 10px;
+  color: white;
+  border-bottom: 2px solid rgba(0, 0, 0, .1);
+  width: 200px;
+  margin: auto 0;
+  font-size: 28px;
+  font-family: 'Just Me Again Down Here' !important;
+}
+
 .main-container {
   margin-left: 200px;
+  text-align: center;
 }
+
+.navbar-toggle {
+  background-color: #EEE !important;
+}
+
+.icon-bar {
+  background-color: #AAA !important;
+}
+
+h2 {
+  padding: auto !important;
+  font-family: 'Just Me Again Down Here' !important;
+}
+
+input {
+  margin-bottom: 20px !important;
+}
+
+/*new page*/
+.edit-container {
+  background-color: #62695B !important;
+}
+/*end of edit page*/
 
 /* Used from bootsnipp http://bootsnipp.com/snippets/featured/sidebar-responsive */
 #sidebar-wrapper {
   /*top: 52px;*/
   left: -200px;
   width: 200px;
-  background-color: #E4B3DC;
+  background-color: #62695B;
   color: black;
   position: fixed;
   height: 100%;
   z-index: 1;
 }
+
 .sidebar-nav {
-  position: absolute;
-  top: 0;
   margin: 0;
   padding: 0;
-  width: 250px;
+  width: 200px;
   list-style: none;
 }
+
 .sidebar-nav li {
   text-indent: 20px;
   line-height: 50px;
@@ -59,5 +118,17 @@
 @media (max-width: 768px) {
   .main-container {
     margin: auto;
+  }
+
+  section {
+    background-color: transparent;
+    border-bottom: none;
+    width: 200px;
+    padding: 0px;
+  }
+
+  img {
+    width: 300px;
+    padding: 0px;
   }
 }

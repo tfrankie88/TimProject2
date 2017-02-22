@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Method-Management</title>
     <link rel="stylesheet" href="/main.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -25,16 +25,17 @@
 			        <span class="icon-bar"></span>
 			    </a>
         </div>
-  			<a class="navbar-brand" href="home.xhtml">
-  				logo
-  			</a>
   		</div>
   		<div id="sidebar-wrapper" class="sidebar-toggle">
-        <ul class="sidebar-nav">
-        <% articles.forEach(wiki => { %>
-		    	<li>
-		      		<a class="list-items" href="/wiki/<%= wiki.category %>/show"><%= wiki.category %></a>
-		    	</li>
+        <div class="categories-title">
+          <h3>The Categories</h3>
+        </div>
+        <ul class="sidebar-nav" name="The Categories">
+        <!-- Dan Helped Me BIG TIME With This -->
+        <% print.forEach((wiki, i) => { %>
+  	    	<li>
+  	      	<a class="list-items" href="/wiki/<%= print[i] %>/show"><%= print[i] %></a>
+  	    	</li>
         <% }) %>
       </ul>
   		</div>
@@ -43,19 +44,9 @@
           <h1>Method-Man(agement)</h1>
         </header>
         <section>
-          <a href="/wiki/new">add new</a>
+          <a href="/wiki/new"><img id="meth" src="method-man.svg" width="400px" alt=""></a>
         </section>
       </div>
     </div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

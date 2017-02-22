@@ -8,9 +8,17 @@ controller.index  = (req,res) => {
   Wiki
   .findAll()
   .then((data => {
-    // console.log(data, data[0].original_date)
+    // Thanks DAN! This function is for adding new articles to the list
+    // without printing duplicates
+    let categories = [];
+    data.forEach((article) => {
+      if (!categories.includes(article.category)) {
+        categories.push(article.category)
+      }
+    })
     res.render('wikis/index.ejs', {
-      articles: data
+      articles: data,
+      print: categories
     })
   .catch(err => console.log('ERROR', err));
   }));
@@ -21,6 +29,7 @@ controller.new = (req,res) => {
 }
 
 controller.create = (req,res) => {
+  // Dan said the words "string concatenation" and let me run
   let first_date = timestamp();
   let original_date = first_date.split(':').join('-');
   let convertedMark = marked(req.body.wiki.content);
@@ -43,8 +52,10 @@ controller.show = (req,res) => {
 
 controller.update = (req,res) => {
   console.log(req.body);
+  let first_date = timestamp();
+  let update_date = first_date.split(':').join('-');
   Wiki
-  .update(req.body.articles, req.params.id)
+  .update(req.body.articles, req.params.id, update_date)
   .then(() => res.redirect('/wiki'))
   .catch(err => console.log('ERROR', err));
   // res.send(req.body);

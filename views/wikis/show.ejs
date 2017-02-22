@@ -3,22 +3,49 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Category</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Method-Management</title>
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/main.js" type="text/javascript"></script>
   </head>
   <body>
-    <div class="category-body"
-    <% articles.forEach(wiki => { %>
-      <div class="content_container">
+    <div class="container">
+      <div class="list-items">
+        <a id="menu-toggle" href="#" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+      </div>
+      <div id="sidebar-wrapper" class="sidebar-toggle">
+        <ul class="sidebar-nav">
+        <% articles.forEach(wiki => { %>
+          <li>
+              <a class="list-items" href="/wiki/<%= wiki.category %>/show"><%= wiki.category %></a>
+          </li>
+        <% }) %>
+      </ul>
+      </div>
+      <div class="main-container show">
+      <% articles.forEach(wiki => { %>
         <h2><%= wiki.title %></h2>
         <h3><%= wiki.category %></h3>
         <p><%- wiki.content %></p>
         <% console.log(typeof `${wiki.original_date}`) %>
         <p><%= `${wiki.original_date}`.slice(0,10) %></p>
+        <p><%= `${wiki.update_date}`.slice(0,10) %></p>
         <button type="button" name="edit page">
           <a href="/wiki/<%= wiki.id %>/edit">edit page</a>
         </button>
+      <% }) %>
       </div>
-    <% }) %>
     </div>
   </body>
 </html>
