@@ -7,6 +7,11 @@ h1 {
   padding-bottom: 10px;
   font-family: 'Just Me Again Down Here' !important;
   font-size: 50px !important;
+  color: #333 !important;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 h2 {

@@ -15,8 +15,9 @@
   </head>
   <body>
     <div class="container">
-      <h1>check yo self</h1>
+      <a href="/"><h1>Method-Man(agement)</h1></a>
       <section>
+        <h2>check yo self</h2>
         <form method="POST" action="/wiki/<%= articles.id %>?_method=PUT">
           <label for="articles[title]">title</label><br>
           <input type="text" name="articles[title]" value="<%= articles.title %>"><br>
