@@ -27,6 +27,8 @@ $(document).ready(function() {
 			document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
 		}
 	});
+  // End of bootsnipp
+  
   // help stack overflow http://stackoverflow.com/questions/10709016/change-image-onmouseover
   $('#meth').hover(function() {
     $(this).attr('src', '/method-man-comment.svg');
@@ -35,4 +37,3 @@ $(document).ready(function() {
   });
   // end of stack overflow
 });
-// End of bootsnipp
