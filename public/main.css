@@ -9,8 +9,36 @@ h1 {
   font-size: 50px !important;
 }
 
-button {
+h2 {
+  padding: auto !important;
+  font-family: 'Just Me Again Down Here' !important;
+  margin-top: 10px;
+}
 
+input {
+  margin-bottom: 20px !important;
+}
+
+button {
+  background-color: #62695B !important;
+  color: #EEE;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  border-bottom: 3px solid rgba(0, 0, 0, .25);
+}
+
+button a {
+  color :#EEE;
+}
+
+input[type="submit"] {
+  background-color: #62695B !important;
+  color: #EEE;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  border-bottom: 3px solid rgba(0, 0, 0, .25);
 }
 
 section {
@@ -21,6 +49,12 @@ section {
   padding: 20px;
   border-radius: 3px;
   border-bottom: 4px solid rgba(0, 0, 0, .25);
+  margin-bottom: 10px;
+}
+
+#markdown {
+  width: 250px;
+  height: 100px
 }
 
 .starter-template {
@@ -43,6 +77,11 @@ section {
   text-align: center;
 }
 
+.main-container.show {
+  margin-left: 0px;
+  text-align: center;
+}
+
 .navbar-toggle {
   background-color: #EEE !important;
 }
@@ -51,14 +90,6 @@ section {
   background-color: #AAA !important;
 }
 
-h2 {
-  padding: auto !important;
-  font-family: 'Just Me Again Down Here' !important;
-}
-
-input {
-  margin-bottom: 20px !important;
-}
 
 /*new page*/
 .edit-container {

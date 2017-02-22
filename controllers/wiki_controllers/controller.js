@@ -32,6 +32,7 @@ controller.create = (req,res) => {
   // Dan said the words "string concatenation" and let me run
   let first_date = timestamp();
   let original_date = first_date.split(':').join('-');
+  // Tom and I divided and conquered thanks Tom for explaining marked to me
   let convertedMark = marked(req.body.wiki.content);
   Wiki
   .save(req.body.wiki, convertedMark, original_date)
@@ -43,6 +44,12 @@ controller.show = (req,res) => {
   Wiki
   .findCategory(req.params.category)
   .then((data) => {
+    let categories = [];
+    data.forEach((article) => {
+      if (!categories.includes(article.category)) {
+        categories.push(article.category)
+      }
+    })
     res.render('wikis/show', {
       articles: data
     })

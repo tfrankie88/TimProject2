@@ -15,19 +15,21 @@
   </head>
   <body>
     <div class="container">
-      <h1>yoo</h1>
-      <form method="POST" action="/wiki/<%= articles.id %>?_method=PUT">
-        <label for="articles[title]">title</label><br>
-        <input type="text" name="articles[title]" value="<%= articles.title %>"><br>
-        <label for="articles[category]">category</label><br>
-        <input type="text" name="articles[category]" value="<%= articles.category %>"><br>
-        <label for="articles[content]">content</label><br>
-        <input type="text" name="articles[content]" value="<%= articles.content %>"><br>
-        <input type="submit" name="" value="edit wiki-page">
-      </form>
-      <form action="/wiki/<%= articles.id %>?_method=DELETE" method="POST">
-        <input type="submit" name="" value="DELETE">
-      </form>
+      <h1>check yo self</h1>
+      <section>
+        <form method="POST" action="/wiki/<%= articles.id %>?_method=PUT">
+          <label for="articles[title]">title</label><br>
+          <input type="text" name="articles[title]" value="<%= articles.title %>"><br>
+          <label for="articles[category]">category</label><br>
+          <input type="text" name="articles[category]" value="<%= articles.category %>"><br>
+          <label for="articles[content]">content</label><br>
+          <input id="markdown" type="text" name="articles[content]" value="<%= articles.content %>"><br>
+          <input type="submit" name="" value="edit wiki-page">
+        </form>
+        <form action="/wiki/<%= articles.id %>?_method=DELETE" method="POST">
+          <input type="submit" name="" value="DELETE">
+        </form>
+      </section>
     </div>
   </body>
 </html>
